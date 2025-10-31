@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+instance/
+db.sqlite3
+
+# Node
+node_modules/
+dist/
+.npm
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
