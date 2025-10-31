@@ -1,0 +1,84 @@
+voyageid,shipname,captain,date,origin_port,destination_port,ship_type,cargo_summary,Source/Database
+1,,John Painter,1730-06-11,Lewis on Delaware,Custom House Boston,,,Readex
+2,,Mane,1730-06-22,Custom House New York,Lewes on Delaware,,,Newspapers.com
+3,,Paynter,1730-10-19,Custom House New York,Lewes on Delaware,,,Newspapers.com
+4,,Paynter,1731-05-24,Lewes on Delaware,Custom House New York,,,Newspapers.com
+5,Kent & Sussex,Josh. Fisher,1731-06-21,Custom House New York,Lewis on Delaware,Schooner,,Newspapers.com
+6,,Paynter,1731-07-05,Lewes on Delaware,Custom House New York,,,Newspapers.com
+7,,Dyre and Paynter,1731-08-09,Lewes on Delaware,Custom House New York,,,Newspapers.com
+8,,Paynter,1731-08-16,Custom House New York,Lewes on Delaware,,,Newspapers.com
+9,,Nathaniel Hall,1731-11-15,Custom House New York,Lewis on Delaware,,,Newspapers.com
+10,,Blundel,1732-06-26,,,,,Newspapers.com
+11,,Sam Blundel,1732-07-03,,,,,Readex
+12,,Given,1732-08-21,,,,,Newspapers.com
+13,,Molleston,1732-10-02,Lewes on Delaware,Custom House New York,,,Newspapers.com
+14,Catherine,,1734-06-17,Custom House New York,Lewes on Delaware,Schooner,,Newspapers.com
+15,,A. Whitebank (Wiltbank),1737-01-17,,,,,Newspapers.com
+16,Sarah,William Sandwich,1737-04-07,Custom House Philadelphia,for Lewis Town,Schooner,,Newspapers.com
+17,Willoughby,Richard Davis,1737-04-07,,,Ship,,Readex
+18,,Molleston,1737-05-09,Custom House New York,Lewes on Delaware,,,Newspapers.com
+19,,Whilebank (Wiltbank),1737-07-18,Custom House New York,Lewis on Delaware,,,Newspapers.com
+20,Swansey,John Carnan,1737-11-03,,,Sloop,,Readex
+21,Charming Sally,David Hall,1739-07-05,Lewes on Delaware,Custom House Philadelphia,Sloop,,Newspapers.com
+22,,Black,1741-01-21,Custom House New York,Lewis on Delaware,,,Newspapers.com
+23,,Stretcher,1741-06-29,Custom House New York,Lewis on Delaware,,,Newspapers.com
+24,,Newbold,1745-10-24,Custom House New York,Lewis on Delaware,,,Newspapers.com
+25,,Rose,1746-11-13,,,,,Readex
+26,,Cooper,1746-12-30,Custom House New York,Lewis on Delaware,,,Newspapers.com
+27,,Pearse,1747-02-24,,,,,Newspapers.com
+28,,Gifford,1747-02-24,Custom House New York,Lewis on Delaware,,,Newspapers.com
+29,,Shourt,1747-07-09,,,,,Readex
+30,City of Derry,J. Kar,1748-12-12,Custom House New York,to Lewis on Delaware,Snow,,Readex
+31,Little Polly,John Green,1749-02-28,,,Sloop,,Newspapers.com
+32,,Chase and Brown,1750-01-02,Custom House New York,Lewis on Delaware,,,Newspapers.com
+33,Catherine and Anne,J. Wright,1750-09-17,from Lewis on Delaware,Custom House New York,Sloop,,Readex
+34,Catherine and Anne,J. Wright,1750-09-24,for Lewis on Delaware,Custom House New York,Sloop,,Readex
+35,Gabriel,W. Beaton,1751-02-11,for Lewis on Delaware,Custom House New York,Sloop,,Readex
+36,Speedwell,Jo. Colman,1751-03-25,Custom House New York,to Lewis on Delaware,Sloop,,Readex
+37,Phoenix,John Stevens,1751-08-29,Lewes,Custom House Philadelphia,Sloop,,Newspapers.com
+38,Ann,John Goddard,1752-04-09,Custom House Philadelphia,Lewis Town,Sloop,,Readex
+39,Nancy,John Willard,1752-04-09,,,Sloop,,Readex
+40,Speedwell,Mitchell Henderson,1752-07-23,Custom House New York,Lewes on Delaware,Sloop,,Newspapers.com
+41,Staford,Sam. Kemble,1752-08-27,Custom House New York,to Lewis on Delaware,Sloop,,Readex
+42,Molly,David Hall,1752-10-26,Lewes on Delaware,Custom House Philadelphia,Brig,,Newspapers.com
+43,Fame,Cornelius Kollock,1752-12-17,Custom House Philadelphia,Lewes,Schooner,,Newspapers.com
+44,Dolphin,Seneck Holly,1753-03-06,,,Sloop,,Newspapers.com
+45,Dolphin,Sellock Holly,1753-03-13,Custom House New York,to Lewes on Delaware,Sloop,,Newspapers.com
+46,Endeavour,Benjamin Weaver,1753-04-12,from Port Lewes,Custom House Philadelphia,Sloop,,Newspapers.com
+47,Charles and Betty,Thomas Clifton,1753-05-03,from Lewes-Town,Custom House Philadelphia,Schooner,,Newspapers.com
+48,Nancy,Alexander Sage,1753-11-22,Port Lewes,Custom House Philadelphia,Sloop,,Newspapers.com
+49,Mulberry,J. Shankland,1754-06-06,"Lewes, on Delaware",Custom House New York,Schooner,,Newspapers.com
+50,Mulberry,J. Shankland,1754-06-13,,,Schooner,,Newspapers.com
+51,Mulberry,J. Shankland,1754-06-20,Custom House New York,to Lewes Town,Schooner,,Newspapers.com
+52,Nancy,Ralph Forster,1759-11-29,Lewes on Delaware,Custom House Philadelphia,Ship,,Newspapers.com
+53,George,S. Archbold,1760-03-27,Lewes on Delaware,Custom House Philadelphia,Brig,,Newspapers.com
+54,Rebecca,T. Callender,1760-04-03,"Lewes, on Delaware",Custom House Philadelphia,Ship,,Newspapers.com
+55,Sarah,Alexander Katter,1760-04-10,from Lewis on Delaware,Custom House Philadelphia,Ship,,Readex
+56,Sally,W Budden,1760-05-22,from Lewis on Delaware,Custom House Philadelphia,Schooner,,Readex
+57,Polly,Robert Hardie,1760-11-13,"Lewes, on Delaware",Custom House Philadelphia,Brig,,Newspapers.com
+58,Duke of Marlborough,D. Carriande,1761-09-10,Lewes on Delaware,Custom House Philadelphia,Brig,,Newspapers.com
+59,Willet,W. Wasdale,1761-09-24,Lewes on Delaware,Custom House Philadelphia,Brig,,Newspapers.com
+60,Meredith and Neave,T. Coursey,1761-11-19,Custom House Philadelphia,Lewes on Delaware,Brig,,Newspapers.com
+61,Fanny,R. Tilden,1761-12-03,Lewes on Delaware,Custom House Philadelphia,Brig,,Newspapers.com
+62,Polly,P. Long,1762-03-25,Lewes on Delaware,Custom House Philadelphia,Schooner,,Newspapers.com
+63,Elizabeth,P. Deady,1762-11-18,,,Brig,,Newspapers.com
+64,Elizabeth,P. Deady,1762-12-02,Lewes on Delaware,Custom House Philadelphia,Brig,,Newspapers.com
+65,Restitution,J. Cox,1763-11-03,Lewes on Delaware,Custom House Philadelphia,Sloop,,Newspapers.com
+66,Industry,Taylor,1764-05-28,Custom House Newport Rhode Island,Lewis on Delaware,Sloop,,Readex
+67,Polly,Wady,1764-07-16,Port Lewis on Delaware,Custom House Newport Rhode Island,Sloop,,Readex
+68,Mayflower,Butler,1764-08-13,Lewis on Delaware,Custom House Newport Rhode Island,Schooner,,Readex
+69,Endeavour,Fossett,1764-09-10,Lewis on Delaware,Custom House Newport Rhode Island,Sloop,,Readex
+70,Charming Molly,David Gray,1767-12-01,Lewes on Delaware,District of Accomack,,"1 hhd rum, 1 hhd molasses, 60 bushels of salt",Newspapers.com
+71,Spiers,James Lusk,1768-06-09,Lewis on Delaware,Upper District of the James River,,"10,000 bushels of salt",Family Search
+72,Clyde,Matthew Buchanan,1768-09-07,Port Lewes on Delaware,Upper District of the James River,,,Family Search
+73,Clyde,Matthew Buchanan,1768-09-22,"Lewes on Delaware, and the West Indies",Upper District of the James River,,"2,000 bushels of salt",Newspapers.com
+74,Lilly,John Mackie,1768-12-08,Lewes on Delaware,Upper District of the James River,,"3,000 bushels of salt",Newspapers.com
+75,Ceres,Nicholas Bodkin,1774-02-03,Lewis Town,Custom House Annapolis,Snow,,Newspapers.com
+76,Polly,R. Schoolfield,1774-07-25,Custom House Philadelphia,Lewes-Town,Schooner,,Newspapers.com
+77,Betsey Richmond,William Nicoll,1774-09-29,Lewis Town,Custom House Annapolis,Ship,,Newspapers.com
+78,Etty,Richard Robinson,1774-10-13,from Lewis-Town,Custom House Annapolis,Brig,,Newspapers.com
+79,Neptune,J. Wallace,1774-12-07,from Lewes on Delaware,Custom House Philadelphia,Snow,,Readex
+80,Neptune,T.E Wallace,1774-12-12,Lewis on Delaware,Custom House Philadelphia,Snow,,Readex
+81,London Packet,J. Cooke,1774-12-14,Lewes on Delaware,Custom House Philadelphia,Ship,,Newspapers.com
+82,Price George,James Bartholomew,1775-07-06,Lewis-Town,Custom House Annapolis,Ship,,Newspapers.com
+83,Polly,R. Schoolfield,1775-07-25,Custom House Philadelphia,Lewes-Town,Schooner,,Newspapers.com
