@@ -1,0 +1,820 @@
+@mixin breakpoint-standard($size) {
+  @if $size==0 {
+    @media only screen and (max-width: 374px) {
+      @content;
+    }
+  } @else if $size==1 {
+    @media only screen and (min-width: 375px) and (max-width: 425px) {
+      @content;
+    }
+  } @else if $size==1.1 {
+    @media only screen and (min-width: 425px) and (max-width: 479px) {
+      @content;
+    }
+  } @else if $size==2 {
+    @media only screen and (min-width: 480px) and (max-width: 575px) {
+      @content;
+    }
+  } @else if $size==3 {
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $size==4 {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $size==5 {
+    @media only screen and (min-width: 992px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size==6 {
+    @media only screen and (min-width: 1025px) and (max-width: 1366px) {
+      @content;
+    }
+  } @else if $size==7 {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+}
+
+#main-page-past-home {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+      rgba(127, 118, 191, 0.85),
+      rgba(127, 118, 191, 0.5)
+    ),
+    url('../assets/intra-american.jpeg') center / cover;
+}
+
+.grid-people-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+
+  @include breakpoint-standard(3) {
+    display: none;
+  }
+
+  @include breakpoint-standard(2) {
+    display: none;
+  }
+
+  @include breakpoint-standard(1) {
+    display: none;
+  }
+
+  @include breakpoint-standard(0) {
+    display: none;
+  }
+
+  img {
+    object-fit: cover;
+    height: 90vh;
+    max-height: 100%;
+    position: relative;
+    top: 6px;
+
+    @include breakpoint-standard(6) {
+      height: 80vh;
+    }
+
+    @include breakpoint-standard(5) {
+      height: 80vh;
+    }
+
+    @include breakpoint-standard(4) {
+      height: 75vh;
+    }
+
+    @include breakpoint-standard(3) {
+      display: none;
+    }
+
+    @include breakpoint-standard(2) {
+      display: none;
+    }
+
+    @include breakpoint-standard(1) {
+      display: none;
+    }
+
+    @include breakpoint-standard(0) {
+      display: none;
+    }
+  }
+}
+
+.flipped-image {
+  transform: scaleX(-1);
+}
+
+.grid-people-introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.text-intro-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 0 2rem;
+
+  .text-intro {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #ffffff;
+    padding-bottom: 2rem;
+    text-align: left; 
+  }
+  @include breakpoint-standard(6) {
+    font-size: 1.15rem;
+    padding: 0 1rem 0 1rem;
+  }
+
+  @include breakpoint-standard(5) {
+    font-size: 1.15rem;
+    padding: 0 1.25rem 0 1rem;
+  }
+
+  @include breakpoint-standard(4) {
+    font-size: 1.15rem;
+    padding: 0;
+  }
+
+  @include breakpoint-standard(3) {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  @include breakpoint-standard(2) {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  @include breakpoint-standard(1) {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  @include breakpoint-standard(0) {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
+
+.btn-Enslaved-enslavers {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.credit-bottom-right {
+  align-self: flex-end;
+  color: #d1d1d1;
+  font-size: 0.9rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.enslaved-btn {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+  color: black;
+  margin-right: 20px;
+  padding: 8px;
+  font-size: 1.15rem;
+  line-height: 16px;
+  width: 150px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+  }
+
+  @include breakpoint-standard(4) {
+    font-size: 14px;
+    width: 120px;
+  }
+
+  @include breakpoint-standard(3) {
+    font-size: 14px;
+    width: 80px;
+  }
+
+  @include breakpoint-standard(2) {
+    font-size: 12px;
+    width: 90px;
+    line-height: 22px;
+  }
+
+  @include breakpoint-standard(1) {
+    font-size: 12px;
+    width: 90px;
+    line-height: 22px;
+  }
+
+  @include breakpoint-standard(0) {
+    font-size: 12px;
+    width: 90px;
+    line-height: 22px;
+  }
+}
+
+.enslavers-btn {
+  background-color: #ffffff;
+  color: black;
+  margin-left: 15px;
+  border-radius: 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 28px;
+  width: 100px;
+  cursor: pointer;
+  box-shadow: 2px 3px 2px #c7c5c5;
+
+  &:hover {
+    background-color: rgb(219 214 251);
+  }
+
+  @include breakpoint-standard(3) {
+    font-size: 14px;
+    width: 80px;
+  }
+
+  @include breakpoint-standard(2) {
+    font-size: 12px;
+    width: 65px;
+    line-height: 22px;
+  }
+
+  @include breakpoint-standard(1) {
+    font-size: 12px;
+    width: 65px;
+    line-height: 22px;
+  }
+
+  @include breakpoint-standard(0) {
+    font-size: 12px;
+    width: 65px;
+    line-height: 22px;
+  }
+}
+
+.header-logo-icon-people {
+  display: flex;
+  align-items: center;
+
+  .people-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.75);
+
+    @include breakpoint-standard(6) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint-standard(6) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint-standard(5) {
+      font-size: 0.75rem;
+    }
+
+    @include breakpoint-standard(4) {
+      font-size: 0.75rem;
+    }
+
+    @include breakpoint-standard(3) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint-standard(2) {
+      font-size: 14px;
+    }
+
+    @include breakpoint-standard(1) {
+      font-size: 10px;
+    }
+
+    @include breakpoint-standard(0) {
+      font-size: 10px;
+    }
+  }
+}
+
+// Enslaved
+#enslaved-home-page {
+  padding: 0;
+  margin: 0;
+
+  @include breakpoint-standard(4) {
+    top: -40px !important;
+  }
+
+  @include breakpoint-standard(3) {
+    top: -15px !important;
+  }
+
+  @include breakpoint-standard(2) {
+    top: -15px !important;
+  }
+
+  @include breakpoint-standard(1.1) {
+    top: -15px !important;
+  }
+
+  @include breakpoint-standard(1) {
+    top: -10px !important;
+  }
+
+  @include breakpoint-standard(0) {
+    top: -10px !important;
+  }
+}
+
+#main-enslaved-home {
+  height: 110vh;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgb(144, 104, 102, 0.85), rgb(144, 104, 102, 0.8)),
+    url('../assets/enslavedBG.jpeg') center / cover;
+
+  @include breakpoint-standard(4) {
+    height: 100vh;
+  }
+
+  @include breakpoint-standard(3) {
+    height: 100vh;
+  }
+
+  @include breakpoint-standard(2) {
+    height: 100vh;
+  }
+
+  @include breakpoint-standard(1) {
+    height: 120vh;
+  }
+
+  @include breakpoint-standard(0) {
+    height: 120vh;
+  }
+}
+
+#main-enslavers-home {
+  background-repeat: no-repeat;
+  background: linear-gradient(rgb(63, 150, 125, 0.85), rgb(63, 150, 125, 0.8)),
+    url('../assets/enslaverBG.gif') center / cover;
+  height: 100vh;
+
+  @include breakpoint-standard(7) {
+    height: 100vh;
+  }
+
+  @include breakpoint-standard(6) {
+    height: 100vh;
+  }
+
+  @include breakpoint-standard(5) {
+    height: auto;
+  }
+
+  @include breakpoint-standard(4) {
+    height: auto;
+  }
+
+  @include breakpoint-standard(3) {
+    height: auto;
+  }
+
+  @include breakpoint-standard(2) {
+    height: auto;
+  }
+
+  @include breakpoint-standard(1) {
+    height: auto;
+  }
+
+  @include breakpoint-standard(1.1) {
+    height: auto;
+  }
+
+  @include breakpoint-standard(0) {
+    height: auto;
+  }
+}
+
+.enslaved-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 34px;
+
+  @include breakpoint-standard(6) {
+    font-size: 26px;
+  }
+
+  @include breakpoint-standard(5) {
+    font-size: 20px;
+  }
+
+  @include breakpoint-standard(4) {
+    font-size: 20px;
+  }
+
+  @include breakpoint-standard(3) {
+    font-size: 16px;
+  }
+
+  @include breakpoint-standard(2) {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  @include breakpoint-standard(1) {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  @include breakpoint-standard(0) {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.enslaved-title {
+  color: #fff;
+  padding-right: 0.35rem;
+}
+
+.enslaved-header-subtitle {
+  display: flex;
+  font-size: 1.4rem;
+  padding-left: 5px;
+  position: relative;
+  font-weight: bold;
+  color: #fff;
+
+  @include breakpoint-standard(7) {
+    font-size: 1rem;
+    top: 2px;
+  }
+
+  @include breakpoint-standard(6) {
+    font-size: 1rem;
+    top: 2px;
+  }
+
+  @include breakpoint-standard(5) {
+    font-size: 0.75rem;
+    top: 2px;
+  }
+
+  @include breakpoint-standard(4) {
+    font-size: 0.75rem;
+    top: 2px;
+  }
+
+  @include breakpoint-standard(3) {
+    font-size: 1rem;
+    top: 2px;
+  }
+
+  @include breakpoint-standard(2) {
+    font-size: 14px;
+    top: 2px;
+  }
+
+  @include breakpoint-standard(1) {
+    font-size: 10px;
+    top: 2px;
+  }
+
+  @include breakpoint-standard(0) {
+    font-size: 10px;
+    top: 2px;
+  }
+}
+
+.grid-enslaved-introduction {
+  position: relative;
+  top: 20%;
+  padding: 4rem 1rem 4rem 5rem;
+  width: 90%;
+  font-size: 24px;
+
+  @include breakpoint-standard(7) {
+    padding: 4rem 2rem 0 4rem;
+  }
+
+  @include breakpoint-standard(6) {
+    padding: 4rem 2rem 0 4rem;
+  }
+
+  @include breakpoint-standard(5) {
+    padding: 1rem;
+  }
+
+  @include breakpoint-standard(4) {
+    padding: 1rem;
+  }
+
+  @include breakpoint-standard(3) {
+    padding: 1rem;
+  }
+
+  @include breakpoint-standard(2) {
+    padding: 1rem;
+  }
+
+  @include breakpoint-standard(1) {
+    padding: 1rem;
+  }
+
+  @include breakpoint-standard(0) {
+    padding: 1rem;
+  }
+
+}
+
+.intro-box {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  padding: 4rem;
+  background: rgb(178, 148, 147, 0.5);
+
+  @include breakpoint-standard(5) {
+    padding: 1rem;
+    font-size: 20px;
+  }
+
+  @include breakpoint-standard(4) {
+    padding: 1rem;
+    font-size: 16px;
+  }
+
+  @include breakpoint-standard(3) {
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(2) {
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(1.1) {
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(1) {
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(0) {
+    padding: 1rem;
+    font-size: 14px;
+  }
+}
+
+.intro-box-enslavers {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  padding: 4rem 1rem 2rem 4rem;
+  background: rgb(63, 150, 125, 0.5);
+
+  @include breakpoint-standard(7) {
+    padding: 5rem 2rem 2rem 2rem;
+    font-size: 20px;
+  }
+
+  @include breakpoint-standard(6) {
+    padding: 6rem 2rem 2rem 2rem;
+    font-size: 20px;
+  }
+
+  @include breakpoint-standard(5) {
+    padding: 6rem 2rem 2rem 2rem;
+    font-size: 20px;
+  }
+
+  @include breakpoint-standard(4) {
+    padding: 7rem 2rem 2rem 2rem;
+    font-size: 16px;
+  }
+
+  @include breakpoint-standard(3) {
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(2) {
+    padding: 5rem 2rem 2rem 2rem;
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(1.1) {
+    padding: 7rem 2rem;
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(1) {
+    padding: 7rem 2rem;
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(0) {
+    padding: 7rem 2rem;
+    font-size: 14px;
+  }
+}
+
+.grid-enslavers-introduction {
+  position: relative;
+  padding: 4rem 5.5rem;
+
+  @include breakpoint-standard(7) {
+    padding: 2rem 5.5rem 2rem 2rem;
+  }
+
+  @include breakpoint-standard(6) {
+    padding: 2rem 5.5rem 2rem 2rem;
+  }
+
+  @include breakpoint-standard(5) {
+    padding: 2rem 5.5rem 2rem 2rem;
+  }
+
+  @include breakpoint-standard(4) {
+    padding: 1rem;
+  }
+
+  @include breakpoint-standard(3) {
+    padding: 1rem;
+  }
+
+  @include breakpoint-standard(2) {
+    padding: 1rem;
+  }
+
+  @include breakpoint-standard(1) {
+    padding: 1rem;
+  }
+
+  @include breakpoint-standard(0) {
+    padding: 1rem;
+  }
+}
+
+.african-btn {
+  background-color: #ffffff;
+  color: black;
+  margin-right: 15px;
+  padding: 0 10px;
+  font-size: 16px;
+  line-height: 28px;
+  width: 150px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 2px 3px 2px #8f7271;
+
+  &:hover {
+    background-color: #9c8180;
+  }
+}
+
+.oceans-btn {
+  background-color: #ffffff;
+  color: black;
+  margin-left: 15px;
+  border-radius: 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 28px;
+  width: 150px;
+  cursor: pointer;
+  box-shadow: 2px 3px 2px #8f7271;
+
+  &:hover {
+    background-color: #9c8180;
+  }
+}
+
+.btn-enslave-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3%;
+  text-align: center;
+
+  .enslave-nav-btn {
+    background-color: #ffffff;
+    color: black;
+    margin: 2px 8px;
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 28px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 2px 3px 2px #e6e6e6;
+
+    &:hover {
+      background-color: #fae9e9;
+    }
+
+    @include breakpoint-standard(4) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    @include breakpoint-standard(3) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include breakpoint-standard(2) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    @include breakpoint-standard(1.1) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    @include breakpoint-standard(1) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    @include breakpoint-standard(0) {
+      font-size: 8px;
+      line-height: 10px;
+    }
+  }
+}
+
+.table-presentation {
+  @include breakpoint-standard(4) {
+    top: -45px !important;
+  }
+
+  @include breakpoint-standard(3) {
+    top: -45px !important;
+  }
+
+  @include breakpoint-standard(2) {
+    top: -45px !important;
+  }
+
+  @include breakpoint-standard(1.1) {
+    top: -45px !important;
+  }
+
+  @include breakpoint-standard(1) {
+    top: -45px !important;
+  }
+
+  @include breakpoint-standard(0) {
+    top: 0px !important;
+  }
+}
+
+// Enslavers
+#enslavers-home-page {
+  padding: 0;
+  margin: 0;
+
+  .nav-enslavers {
+    background-color: #46a88c;
+    font-size: 12px;
+    box-shadow: none;
+  }
+}

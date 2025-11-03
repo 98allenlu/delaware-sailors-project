@@ -1,0 +1,1010 @@
+@mixin breakpoint-standard($size) {
+  @if $size==0 {
+    @media only screen and (max-width: 374px) {
+      @content;
+    }
+  } @else if $size==1 {
+    @media only screen and (min-width: 375px) and (max-width: 425px) {
+      @content;
+    }
+  } @else if $size==1.1 {
+    @media only screen and (min-width: 425px) and (max-width: 479px) {
+      @content;
+    }
+  } @else if $size==2 {
+    @media only screen and (min-width: 480px) and (max-width: 575px) {
+      @content;
+    }
+  } @else if $size==3 {
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $size==4 {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $size==5 {
+    @media only screen and (min-width: 992px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size==6 {
+    @media only screen and (min-width: 1025px) and (max-width: 1366px) {
+      @content;
+    }
+  } @else if $size==7 {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .mobile-filter-container {
+    display: none !important;
+  }
+  .filter-menu-bar {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 770px) {
+  .mobile-filter-container {
+    display: flex !important;
+  }
+  .filter-menu-bar {
+    display: none !important;
+  }
+}
+
+/* Mobile dropdown specific styles */
+.mobile-filter-overlay .ant-dropdown-menu {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  border: none;
+}
+
+.mobile-filter-overlay .ant-dropdown-menu-item {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #333333;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.mobile-filter-overlay .ant-dropdown-menu-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-filter-overlay .ant-dropdown-menu-item:hover {
+  background-color: #f5f5f5;
+}
+.ant-dropdown-menu-submenu-popup {
+  z-index: 10002 !important;
+}
+
+.ant-dropdown-menu-submenu-popup .ant-dropdown-menu {
+  z-index: 10002 !important;
+}
+
+.mobile-filter-overlay .ant-dropdown-menu-submenu-title {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #333333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-filter-overlay .ant-dropdown-menu-submenu-arrow {
+  right: 16px;
+}
+
+/* Ensure mobile dropdown appears above other elements */
+.mobile-filter-overlay {
+  z-index: 9999;
+}
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.video-background video {
+  object-fit: cover;
+  width: 100%;
+  height: 102%;
+
+  @include breakpoint-standard(2) {
+    height: 100%;
+  }
+
+  @include breakpoint-standard(1) {
+    height: 100%;
+  }
+
+  @include breakpoint-standard(0) {
+    height: 100%;
+  }
+}
+
+#home-voyagepage-container {
+  margin: 0;
+  padding: 0;
+  // background-color: rgba(100, 159, 194, 0.35);
+
+  @include breakpoint-standard(2) {
+    display: inline-block;
+    text-align: center;
+    height: auto;
+    width: 100%;
+  }
+
+  @include breakpoint-standard(1.1) {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  @include breakpoint-standard(1) {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  @include breakpoint-standard(0) {
+    display: inline-block;
+    text-align: center;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  position: relative;
+  z-index: 1;
+}
+
+.home-voyagepage-content {
+  margin: auto;
+}
+
+.header-logo-slave-voyages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+
+  @include breakpoint-standard(7) {
+    padding: 0;
+  }
+
+  @include breakpoint-standard(6) {
+    padding: 0;
+  }
+
+  @include breakpoint-standard(5) {
+    padding: 0 4rem;
+  }
+
+  @include breakpoint-standard(4) {
+    padding: 10rem 5rem 1rem 5rem;
+  }
+
+  @include breakpoint-standard(3) {
+    display: inline-block;
+    text-align: center;
+  }
+
+  @include breakpoint-standard(2) {
+    display: inline-block;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  @include breakpoint-standard(1) {
+    display: inline-block;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  @include breakpoint-standard(0) {
+    display: inline-block;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+
+.voyageLogo-img {
+  img {
+    position: fixed;
+    bottom: 55%;
+  }
+
+  @include breakpoint-standard(2) {
+    img {
+      position: relative;
+      width: 50%;
+    }
+  }
+
+  @include breakpoint-standard(1) {
+    img {
+      position: relative;
+      width: 50%;
+    }
+  }
+
+  @include breakpoint-standard(0) {
+    img {
+      width: 25%;
+    }
+  }
+}
+
+.voyage-text-box {
+  margin: 0 1rem;
+
+  @include breakpoint-standard(2) {
+    img {
+      width: 50%;
+    }
+  }
+
+  @include breakpoint-standard(1) {
+    img {
+      width: 50%;
+    }
+  }
+
+  @include breakpoint-standard(0) {
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.voyage-description {
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 400;
+  // margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-shadow: 1px 1px 1px #000;
+
+  @include breakpoint-standard(7) {
+    font-size: 20px;
+  }
+
+  @include breakpoint-standard(6) {
+    font-size: 18px;
+  }
+
+  @include breakpoint-standard(5) {
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(4) {
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(3) {
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(2) {
+    font-size: 14px;
+    padding: 0 3rem;
+  }
+
+  @include breakpoint-standard(1) {
+    font-size: 14px;
+    padding: 0 1.5rem;
+  }
+
+  @include breakpoint-standard(0) {
+    font-size: 14px;
+    padding: 0 1rem;
+  }
+}
+
+.search-count {
+  color: rgb(56, 116, 203);
+  font-weight: 600;
+}
+
+.voyages-search-box {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  .voyages-search-box-content {
+    width: 80%;
+    height: 45px;
+  }
+
+  .stack-search-global {
+    position: relative;
+    bottom: 40%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 9px 8px -3px rgba(64, 60, 67, 0.24),
+      8px 0 8px -7px rgba(64, 60, 67, 0.24),
+      -8px 0 8px -7px rgba(64, 60, 67, 0.24);
+    border: 0;
+    padding-bottom: 4px;
+
+    .list-search-global {
+      background: #fff;
+    }
+  }
+
+  .input-global-search {
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 42px;
+    z-index: 3;
+
+    @include breakpoint-standard(4) {
+      height: 40px;
+    }
+
+    @include breakpoint-standard(3) {
+      height: 40px;
+    }
+
+    @include breakpoint-standard(2) {
+      height: 38px;
+    }
+
+    @include breakpoint-standard(1) {
+      height: 35px;
+    }
+
+    @include breakpoint-standard(0) {
+      height: 35px;
+    }
+  }
+
+  @include breakpoint-standard(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .voyages-search-box-content {
+      width: 70%;
+      height: 45px;
+    }
+  }
+
+  @include breakpoint-standard(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .voyages-search-box-content {
+      width: 70%;
+      height: 40px;
+    }
+  }
+
+  @include breakpoint-standard(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .voyages-search-box-content {
+      width: 70%;
+      height: 40px;
+    }
+  }
+
+  @include breakpoint-standard(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .voyages-search-box-content {
+      width: 70%;
+      height: 40px;
+      margin-top: 5px;
+    }
+  }
+
+  @include breakpoint-standard(0) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .voyages-search-box-content {
+      width: 70%;
+      height: 40px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.voyages-people-places {
+  padding: 3rem 0 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  color: #ffffff;
+
+  @include breakpoint-standard(4) {
+    padding: 2rem 5rem;
+  }
+
+  @include breakpoint-standard(3) {
+    padding: 2rem 5rem;
+  }
+
+  @include breakpoint-standard(2) {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint-standard(1) {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint-standard(0) {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.voyages-people-places-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000;
+
+  @include breakpoint-standard(5) {
+    font-size: 20px;
+  }
+
+  @include breakpoint-standard(4) {
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+
+  @include breakpoint-standard(3) {
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+
+  @include breakpoint-standard(2) {
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+
+  @include breakpoint-standard(1) {
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+
+  @include breakpoint-standard(0) {
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+}
+
+.voyages-people-places-subtitle {
+  font-size: 16px;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px #000000;
+
+  @include breakpoint-standard(5) {
+    font-size: 14px;
+  }
+
+  @include breakpoint-standard(4) {
+    font-size: 12px;
+  }
+
+  @include breakpoint-standard(3) {
+    font-size: 12px;
+  }
+
+  @include breakpoint-standard(2) {
+    font-size: 12px;
+  }
+
+  @include breakpoint-standard(1) {
+    font-size: 10px;
+  }
+
+  @include breakpoint-standard(0) {
+    font-size: 10px;
+  }
+}
+
+.voyage-page-box {
+  cursor: pointer;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000;
+
+  @include breakpoint-standard(1) {
+    img {
+      width: 60%;
+    }
+  }
+
+  @include breakpoint-standard(0) {
+    img {
+      width: 60%;
+    }
+  }
+}
+
+.people-page-box {
+  cursor: pointer;
+
+  @include breakpoint-standard(1) {
+    img {
+      width: 60%;
+    }
+  }
+
+  @include breakpoint-standard(0) {
+    img {
+      width: 60%;
+    }
+  }
+}
+
+.place-page-box {
+  cursor: pointer;
+
+  @include breakpoint-standard(4) {
+    img {
+      width: 75%;
+    }
+  }
+
+  @include breakpoint-standard(1) {
+    img {
+      width: 60%;
+    }
+  }
+
+  @include breakpoint-standard(0) {
+    img {
+      width: 60%;
+    }
+  }
+}
+
+.place-page-box-timelapse {
+  cursor: pointer;
+  --image-size: 107px;
+
+  img {
+    width: var(--image-size);
+    height: var(--image-size);
+    border-radius: 50%;
+    margin: 5px 0px 10px 0;
+    opacity: 0.65;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  @include breakpoint-standard(6) {
+    --image-size: 110px;
+  }
+
+  @include breakpoint-standard(5) {
+    --image-size: 110px;
+    
+    img {
+      margin: 5px 0px 5px 0;
+    }
+  }
+
+  @include breakpoint-standard(4) {
+    --image-size: 90px;
+    
+    img {
+      margin: 5px 0 5px 0;
+    }
+  }
+
+  @include breakpoint-standard(3) {
+    --image-size: 80px;
+    
+    img {
+      margin: 5px 0 5px 0;
+    }
+  }
+
+  @include breakpoint-standard(2) {
+    --image-size: 70px;
+    
+    img {
+      margin: 5px 0 5px 0;
+    }
+  }
+
+  @include breakpoint-standard(1) {
+    --image-size: 65px;
+    
+    img {
+      margin: 5px 0 5px 0;
+    }
+  }
+
+  @include breakpoint-standard(0) {
+    --image-size: 60px;
+    
+    img {
+      margin: 5px 0 5px 0;
+    }
+  }
+}
+
+.document-resources {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.document-resources-text {
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  top: 45%;
+}
+
+.document-cycle {
+  cursor: pointer;
+}
+
+.resourc-cycle {
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+}
+
+.about-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  @include breakpoint-standard(1) {
+    margin: 2rem 0;
+  }
+
+  @include breakpoint-standard(0) {
+    margin: 2rem 0;
+  }
+}
+
+.about-project-btn {
+  width: 160px;
+  background-color: #baa372;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 2px 3px 3px #00000085;
+  border-color: #707070;
+  text-shadow: 1px 1px #000000;
+
+  @include breakpoint-standard(1) {
+    width: 140px;
+  }
+
+  @include breakpoint-standard(0) {
+    width: 140px;
+  }
+}
+
+.filter-menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-navbar-reset-all {
+  margin-left: 15px;
+  cursor: pointer;
+  border: 1px white solid;
+  border-radius: 3px;
+  color: white !important;
+  padding: 0.25rem;
+  font-size: 0.85rem;
+  background: transparent;
+
+  span {
+    margin-left: 4px;
+  }
+}
+
+.btn-navbar-hide {
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  padding: 3px;
+  font-size: 0.85rem;
+  width: 70px;
+  background: transparent;
+  border: 1px white solid;
+
+  span {
+    margin-left: 4px;
+  }
+}
+.btn-close-filter{
+  margin-left: 15px;
+  cursor: pointer;
+  border: none;
+  color: white !important;
+  font-size: 0.90rem;
+  background: transparent;
+}
+.reset-filter {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+
+.global-search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .global-search-text {
+    color: #fff;
+    font-size: 14px;
+
+    strong {
+      font-weight: 900;
+      text-decoration: underline;
+      font-size: 16px;
+      transform: skew(-15deg);
+      display: inline-block;
+      padding: 0 8px;
+    }
+  }
+
+  .global-search-exit {
+    margin-left: 9px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 3px 6px;
+    font-size: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px 8px var(--btn-global-shadow--, rgb(11 196 181));
+    background-color: var(--btn-global-search--, rgb(0, 114, 105));
+
+    > svg {
+      font-size: 16px;
+    }
+  }
+}
+
+.no-data-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+}
+
+.backToTopBtn {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+
+  .btn {
+    width: 150px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 1px gray;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+// Footer
+.logo-grid-container {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 0 0;
+  background-color: #bbc2cb;
+}
+
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logo-grid-item {
+  width: 220px;
+  height: 100px;
+  padding: 0 20px;
+  align-items: center;
+  display: flex;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: calc(0.25rem - 1px);
+}
+
+.logo-grid-container:last-child {
+  padding: 2.5rem 0;
+}
+
+.footer-container {
+  background-color: #5d7b8a;
+}
+
+.footer-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 4rem;
+  color: #efefef;
+}
+
+.footer-copyrights {
+  margin: 1rem 0;
+}
+
+.grey {
+  color: #ececec;
+  text-decoration: none;
+}
+
+.link {
+  font-weight: bold;
+  transition: ease 0.3s;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.footer-logo {
+  margin: 1rem 0;
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.languages-homepage {
+  position: absolute;
+  top: 1%;
+  left: 91%;
+
+  @include breakpoint-standard(7) {
+    left: 91%;
+  }
+
+  @include breakpoint-standard(6) {
+    left: 90%;
+  }
+
+  @include breakpoint-standard(5) {
+    left: 90%;
+  }
+
+  @include breakpoint-standard(4) {
+    left: 85%;
+  }
+
+  @include breakpoint-standard(2) {
+    left: 80%;
+  }
+
+  @include breakpoint-standard(1) {
+    left: 75%;
+  }
+
+  @include breakpoint-standard(0) {
+    left: 75%;
+  }
+}
+
+.loading-logo-display {
+  display: flex;
+  justify-content: center;
+  animation: center;
+  margin: auto;
+  height: 45vh;
+  background: transparent;
+
+  > img {
+    width: 10%;
+
+    @include breakpoint-standard(5) {
+      width: 10%;
+    }
+
+    @include breakpoint-standard(4) {
+      width: 10%;
+    }
+
+    @include breakpoint-standard(3) {
+      width: 10%;
+    }
+  }
+}
+
+.pie-plot-container {
+  .pielayer {
+    .slicetext {
+      > text {
+        font-size: 0.85rem !important;
+
+        @include breakpoint-standard(5) {
+          font-size: 12px !important;
+        }
+
+        @include breakpoint-standard(4) {
+          font-size: 12px !important;
+        }
+
+        @include breakpoint-standard(3) {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+}
+
+.enslavers-role-radio {
+  display: flex;
+  justify-self: start;
+  align-items: center;
+  padding-top: 10px;
+}

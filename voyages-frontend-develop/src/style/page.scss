@@ -1,0 +1,847 @@
+@mixin breakpoint-standard($size) {
+  @if $size==0 {
+    @media only screen and (max-width: 374px) {
+      @content;
+    }
+  }
+
+  @else if $size==1 {
+    @media only screen and (min-width: 375px) and (max-width: 424px) {
+      @content;
+    }
+  }
+
+  @else if $size==1.1 {
+    @media only screen and (min-width: 425px) and (max-width: 479px) {
+      @content;
+    }
+  }
+
+  @else if $size==2 {
+    @media only screen and (min-width: 480px) and (max-width: 575px) {
+      @content;
+    }
+  }
+
+  @else if $size==3 {
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $size==4 {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @else if $size==5 {
+    @media only screen and (min-width: 992px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @else if $size==6 {
+    @media only screen and (min-width: 1025px) and (max-width: 1366px) {
+      @content;
+    }
+  }
+
+  @else if $size==7 {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  height: 100vh;
+}
+
+.voyages-home-page {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+
+  @include breakpoint-standard(6) {
+    height: 100%;
+  }
+
+  @include breakpoint-standard(4) {
+    top: -40px !important;
+  }
+
+  @include breakpoint-standard(3) {
+    top: -15px !important;
+  }
+
+  @include breakpoint-standard(2) {
+    top: -15px !important;
+  }
+
+  @include breakpoint-standard(1.1) {
+    top: -15px !important;
+  }
+
+  @include breakpoint-standard(1) {
+    top: -10px !important;
+  }
+
+  @include breakpoint-standard(0) {
+    top: -10px !important;
+  }
+}
+
+.voyages-home-page-timelapse {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  height: calc(100vh - 80px);
+
+  @include breakpoint-standard(6) {
+    height: 100%;
+  }
+
+  @include breakpoint-standard(4) {
+    top: -40px !important;
+  }
+
+  @include breakpoint-standard(3) {
+    top: -15px !important;
+  }
+
+  @include breakpoint-standard(2) {
+    top: -15px !important;
+  }
+
+  @include breakpoint-standard(1.1) {
+    top: -15px !important;
+  }
+
+  @include breakpoint-standard(1) {
+    top: -10px !important;
+  }
+
+  @include breakpoint-standard(0) {
+    top: -10px !important;
+  }
+}
+
+#content-container {
+  position: relative;
+  width: 100%;
+  @include breakpoint-standard(1.1) {
+    position: relative;
+    top: -5%;
+  }
+
+  @include breakpoint-standard(1) {
+    position: relative;
+    top: -5%;
+  }
+}
+
+.text-container.in-sight {
+  opacity: 1;
+  visibility: visible;
+}
+
+.text-container h2 {
+  font-size: 6vh;
+  text-transform: uppercase;
+}
+
+.text-container p {
+  font-size: 2vh;
+  padding: 1em 0;
+}
+
+.nav-dot-container {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.nav-dot {
+  width: 20px;
+  height: 30px;
+  padding: 20px 0px;
+  margin: auto;
+}
+
+.nav-dot span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  transition: all 200ms ease;
+  margin: auto;
+}
+
+.nav-dot span:hover {
+  width: 12px;
+  height: 12px;
+}
+
+.nav-dot.dot-active span {
+  width: 15px;
+  height: 15px;
+}
+
+// Ensure dropdown menu appears above all content
+:global {
+  .ant-dropdown {
+    z-index: 10001 !important;
+  }
+
+  .ant-dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    
+    @include breakpoint-standard(3) {
+      max-height: 300px;
+    }
+
+    @include breakpoint-standard(2) {
+      max-height: 250px;
+    }
+
+    @include breakpoint-standard(1) {
+      max-height: 200px;
+    }
+  }
+}
+
+// Mobile dropdown styles
+.navbar-wrapper-mobile {
+  position: fixed;
+  top: 12%;
+  right: 10px;
+  z-index: 10000;
+  display: block;
+
+  @include breakpoint-standard(5) {
+    top: 12%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(4) {
+    top: 11%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(3) {
+    top: 10%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(2) {
+    top: 10.5%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(1.1) {
+    top: 10%;
+    right: 10px;
+    button {
+      font-size: 12px;
+      height: 26px;
+    }
+  }
+
+  @include breakpoint-standard(1) {
+    top: 10%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(0) {
+    top: 10%;
+    right: 10px;
+    button {
+      font-size: 12px;
+      height: 26px;
+    }
+  }
+}
+
+// Hide desktop navbar on mobile (below 992px)
+.navbar-wrapper {
+  @media only screen and (max-width: 991px) {
+    display: none !important;
+  }
+}
+
+// Desktop vertical navigation (992px and above)
+.nav-button {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 5px;
+  z-index: 10000;
+
+  @include breakpoint-standard(6) {
+    top: 30%;
+    align-items: center;
+  }
+
+  @include breakpoint-standard(5) {
+    top: 30%;
+    align-items: center;
+  }
+  // Hide on mobile (below 992px - handled by parent .navbar-wrapper)
+}
+
+.nav-button-page {
+  width: 92px !important;
+  height: 38px;
+  line-height: 14px !important;
+
+  @include breakpoint-standard(7) {
+    width: 92px !important;
+  }
+
+  @include breakpoint-standard(6) {
+    width: 92px !important;
+  }
+
+  @include breakpoint-standard(5) {
+    width: 82px !important;
+    font-size: 12px !important;
+  }
+
+  @include breakpoint-standard(4) {
+    width: 75px !important;
+    height: 32px;
+    font-size: 10px !important;
+    min-width: 75px !important;
+    margin: 0 2px !important;
+  }
+
+  @include breakpoint-standard(3) {
+    width: 45px !important;
+    height: 24px;
+    font-size: 10px !important;
+    min-width: 45px !important;
+    margin: 0 2px !important;
+  }
+
+  @include breakpoint-standard(2) {
+    width: 45px !important;
+    height: 24px;
+    font-size: 10px !important;
+    min-width: 45px !important;
+    margin: 0 2px !important;
+  }
+
+  @include breakpoint-standard(1.1) {
+    width: 45px !important;
+    height: 24px;
+    font-size: 8px !important;
+    min-width: 45px !important;
+    margin: 0 2px !important;
+  }
+
+  @include breakpoint-standard(1) {
+    width: 40px !important;
+    height: 28px;
+    font-size: 7px !important;
+    min-width: 40px !important;
+    margin: 0 2px !important;
+  }
+
+  @include breakpoint-standard(0) {
+    width: 35px !important;
+    height: 26px;
+    font-size: 6.5px !important;
+    min-width: 35px !important;
+    margin: 1px 1px !important;
+  }
+}
+
+// Mobile dropdown styles for Enslaved
+.navbar-wrapper-mobile-enslaved {
+  position: fixed;
+  top: 12%;
+  right: 10px;
+  z-index: 10000;
+  display: block;
+
+  @include breakpoint-standard(5) {
+    top: 12%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(4) {
+    top: 11%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(3) {
+    top: 10%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(2) {
+    top: 10.5%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(1.1) {
+    top: 10%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(1) {
+    top: 10%;
+    right: 10px;
+    button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+
+  @include breakpoint-standard(0) {
+    top: 10%;
+    right: 10px;
+      button {
+      font-size: 14px;
+      height: 28px;
+    }
+  }
+}
+
+.nav-dropdown-button-enslaved {
+  min-width: 150px;
+  height: 40px;
+  font-size: 14px;
+
+  @include breakpoint-standard(5) {
+    min-width: 130px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  @include breakpoint-standard(4) {
+    min-width: 120px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  @include breakpoint-standard(3) {
+    min-width: 120px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  @include breakpoint-standard(2) {
+    min-width: 110px;
+    height: 32px;
+    font-size: 11px;
+  }
+
+  @include breakpoint-standard(1.1) {
+    min-width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  @include breakpoint-standard(1) {
+    min-width: 90px;
+    height: 28px;
+    font-size: 9px;
+  }
+
+  @include breakpoint-standard(0) {
+    min-width: 80px;
+    height: 26px;
+    font-size: 8px;
+  }
+}
+
+// Update the existing nav-button-enslaved to hide on mobile
+.nav-button-enslaved {
+  position: fixed;
+  top: 45%;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 5px;
+  z-index: 10000;
+
+  @include breakpoint-standard(5) {
+    top: 35%;
+    align-items: center;
+  }
+
+  // Hide on mobile (below 992px)
+  @media only screen and (max-width: 991px) {
+    display: none !important;
+  }
+}
+
+#main-voyagepage {
+  height: 110vh;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(147, 208, 203, 0.5),
+      rgba(147, 208, 203, 0.4)),
+    url('../assets/bgsueArt.svg') center / cover;
+}
+
+#main-voyagepage-Trans-atlantic {
+  height: 110vh;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(56, 116, 203, 0.8), rgba(56, 116, 203, 0.8)),
+    url('../assets/Transatlantic.JPG') center / cover;
+}
+
+#main-voyagepage-intra-american {
+  height: 110vh;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(127, 118, 191, 0.8),
+      rgba(127, 118, 191, 0.8)),
+    url('../assets/intra-american.jpeg') center / cover;
+}
+
+#main-voyagepage-texas {
+  height: 110vh;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(187, 105, 46, 0.8), rgba(187, 105, 46, 0.8)),
+    url('../assets/TexasImg.jpg') center / cover;
+}
+
+.credit-bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 0.95rem;
+
+  @include breakpoint-standard(1) {
+    display: none;
+  }
+
+  @include breakpoint-standard(0) {
+    display: none;
+  }
+}
+
+.main-script-text-box {
+  width: 75%;
+  position: relative;
+  top: 20%;
+  left: 10%;
+
+  @include breakpoint-standard(6) {
+    width: 85%;
+    top: 10%;
+    left: 5%;
+  }
+
+  @include breakpoint-standard(5) {
+    width: 85%;
+    top: 10%;
+    left: 3%;
+  }
+
+  @include breakpoint-standard(4) {
+    width: 90%;
+    top: 12%;
+    left: 5%;
+  }
+
+  @include breakpoint-standard(3) {
+    width: 90%;
+    top: 8%;
+    left: 5%;
+  }
+
+  @include breakpoint-standard(2) {
+    width: 90%;
+    top: 12%;
+    left: 5%;
+  }
+
+  @include breakpoint-standard(1.1) {
+    width: 90%;
+    top: 12%;
+    left: 5%;
+  }
+
+  @include breakpoint-standard(1) {
+    width: 90%;
+    top: 12%;
+    left: 5%;
+  }
+
+  @include breakpoint-standard(0) {
+    width: 90%;
+    top: 12%;
+    left: 5%;
+  }
+}
+
+.main-script-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  font-size: 24px;
+
+  @include breakpoint-standard(0) {
+    padding: 2%;
+    font-size: 14px;
+    margin-top: 20%;
+  }
+
+  @include breakpoint-standard(1) {
+    padding: 2%;
+    font-size: 14px;
+    margin-top: 30%;
+  }
+
+  @include breakpoint-standard(1.1) {
+    padding: 2%;
+    font-size: 14px;
+    margin-top: 30%;
+  }
+
+  @include breakpoint-standard(2) {
+    padding: 2%;
+    font-size: 14px;
+    margin-top: 20%;
+  }
+
+  @include breakpoint-standard(3) {
+    padding: 2%;
+    font-size: 14px;
+    margin-top: 15%;
+  }
+
+  @include breakpoint-standard(4) {
+    padding: 2%;
+    font-size: 18px;
+    margin-top: 15%;
+  }
+
+  @include breakpoint-standard(5) {
+    padding: 2% 3%;
+    font-size: 22px;
+    margin-top: 12%;
+  }
+
+  @include breakpoint-standard(6) {
+    padding: 3%;
+    font-size: 24px;
+    margin-top: 12%;
+  }
+}
+
+.voyages-data-grid {
+  border: 1px solid #ccc;
+}
+
+.cover-end {
+  margin-top: 0rem;
+}
+
+.bgvid-container {
+  position: relative;
+  bottom: 8rem;
+  padding: 0 4rem;
+
+  @include breakpoint-standard(2) {
+    display: none;
+  }
+
+  @include breakpoint-standard(1.1) {
+    display: none;
+  }
+
+  @include breakpoint-standard(1) {
+    display: none;
+  }
+
+  @include breakpoint-standard(0) {
+    display: none;
+  }
+}
+
+.social-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint-standard(2) {
+    display: block;
+  }
+
+  @include breakpoint-standard(1) {
+    display: block;
+  }
+
+  @include breakpoint-standard(0) {
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .scroll {
+    color: #fff;
+    opacity: 0.55;
+  }
+
+  .feedback-report {
+    margin-left: 0.3rem;
+    position: relative;
+    bottom: 0.3rem;
+  }
+
+  .social-icon-container {
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .cover-logo {
+      @include breakpoint-standard(2) {
+        position: relative;
+        left: 2rem;
+      }
+
+      @include breakpoint-standard(1) {
+        position: relative;
+        left: 4rem;
+      }
+
+      @include breakpoint-standard(1.1) {
+        position: relative;
+        left: 3rem;
+      }
+
+      @include breakpoint-standard(0) {
+        position: relative;
+        left: 2rem;
+      }
+    }
+  }
+
+  .separator {
+    color: #fff;
+    opacity: 0.7;
+    margin-left: 0.3rem;
+    position: relative;
+    bottom: 0.3rem;
+  }
+
+  .cover-logo {
+    margin: 1rem 0;
+    height: 50px;
+    opacity: 0.5;
+    display: flex !important;
+    transition: ease 0.3s;
+  }
+
+  .legacy-icon {
+    width: 1.5rem;
+  }
+
+  .social-icon-x {
+    color: rgb(239, 243, 244);
+    background: rgb(239, 243, 244);
+    border-radius: 50%;
+    border: 1px solid rgb(239, 243, 244);
+    width: 1.4rem;
+    opacity: 0.7;
+    margin: 0 0.3rem;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+  .social-icon {
+    width: 1.5rem;
+    opacity: 0.7;
+    color: #fff;
+    margin: 0 0.3rem;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+}
+
+.loading-logo-graph {
+  display: flex;
+  justify-content: center;
+  animation: center;
+  margin: auto;
+  height: 50vh;
+
+  >img {
+    width: 15%;
+
+    @include breakpoint-standard(5) {
+      width: 10%;
+    }
+
+    @include breakpoint-standard(4) {
+      width: 10%;
+    }
+
+    @include breakpoint-standard(3) {
+      width: 10%;
+    }
+  }
+}
